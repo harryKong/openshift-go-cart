@@ -95,6 +95,7 @@ if test -f $build/.gopath
 then
     GOPATH=$CUSTOM_GOPATH:$GOPATH export GOPATH
 fi
+GOPATH=$GOPATH:$p export GOPATH
 go get -tags openshift ./...
 
 mkdir -p $build/bin
